@@ -1,0 +1,18 @@
+<h2>Ratings for <%= @restaurant.name %></h2>
+
+<div class= "container">
+  <% @reviews.each do |review| %>
+    <div class= "row">
+    <h3>Rating: <%= review.rating %> </h3>
+    </div>
+    <div class= "row">
+     <p> </p> <%= review.content %>
+    </div>
+  <% end %>
+</div>
+
+<div>
+  <%= link_to 'See all restaurants', restaurants_path %>
+  <%= link_to 'Back to restaurant', restaurant_path(@restaurant) %>
+</div>
+
